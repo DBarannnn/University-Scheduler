@@ -7,7 +7,7 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name = "study_group")
+@Table(name = "_group")
 public class Group {
     @Id
     @GeneratedValue
@@ -33,6 +33,18 @@ public class Group {
     private void addStudent(Student student){
         students.add(student);
     }
+
+    @ManyToMany
+    @JoinTable(
+            name = "subject_plan",
+            joinColumns = @JoinColumn(name = "group_id"),
+            inverseJoinColumns = @JoinColumn(name = "subject_id")
+    )
+    private List<Subject> subjects;
+
+    @OneToMany(mappedBy = "group")
+    private List<SubjectSchedule> subjectSchedules;
+
 
     @OneToMany(mappedBy = "group")
     private List<Event> events;

@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Data
 @Embeddable
 @NoArgsConstructor
-public class GroupStudentId implements Serializable {
+public class GroupSubjectId implements Serializable {
     private Integer group_id;
-    private Integer student_id;
+    private Integer subject_id;
 }

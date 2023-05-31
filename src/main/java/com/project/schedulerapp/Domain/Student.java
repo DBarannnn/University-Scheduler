@@ -1,10 +1,7 @@
 package com.project.schedulerapp.Domain;
 
 import com.project.schedulerapp.Values.FullName;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
@@ -33,6 +30,9 @@ public class Student {
 
     @Column
     private String password;
+
+    @OneToOne
+    private Group group;
 
 
 }

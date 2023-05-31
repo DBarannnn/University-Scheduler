@@ -17,4 +17,7 @@ public class Subject {
     @OneToMany(mappedBy = "subject")
     private List<Event> events;
 
+    @OneToMany(mappedBy = "subject")
+    private List<SubjectSchedule> subjectSchedules;
+
 }
