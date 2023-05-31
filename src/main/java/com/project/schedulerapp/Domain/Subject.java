@@ -20,4 +20,7 @@ public class Subject {
     @OneToMany(mappedBy = "subject")
     private List<SubjectSchedule> subjectSchedules;
 
+    @ManyToMany(mappedBy = "subjects")
+    private List<Group> groups;
+
 }

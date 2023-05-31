@@ -19,24 +19,12 @@ public class Group {
     @Column(nullable = false)
     private Integer semester;
 
-    @OneToOne
-    private Student headman;
-
-    @ManyToMany
-    @JoinTable(
-            name = "group_student",
-            joinColumns = @JoinColumn(name = "group_id"),
-            inverseJoinColumns = @JoinColumn(name = "student_id")
-    )
+    @ManyToMany(mappedBy = "groups")
     private List<Student> students;
 
-    private void addStudent(Student student){
-        students.add(student);
-    }
-
     @ManyToMany
     @JoinTable(
-            name = "subject_plan",
+            name = "subject_group",
             joinColumns = @JoinColumn(name = "group_id"),
             inverseJoinColumns = @JoinColumn(name = "subject_id")
     )
@@ -45,11 +33,7 @@ public class Group {
     @OneToMany(mappedBy = "group")
     private List<SubjectSchedule> subjectSchedules;
 
-
     @OneToMany(mappedBy = "group")
     private List<Event> events;
 
-    private void addEvent(Event event){
-        events.add(event);
-    }
 }

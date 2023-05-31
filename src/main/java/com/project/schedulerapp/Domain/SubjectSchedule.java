@@ -23,14 +23,12 @@ public class SubjectSchedule {
     @JoinColumn(name = "group_id")
     private Group group;
 
-    private LocalTime start_time;
+    private LocalTime startTime;
 
-    private LocalTime end_time;
+    private LocalTime endTime;
 
     @Enumerated(value = EnumType.STRING)
     private Day day;
 
     private Boolean isOdd;
-
-
 }
