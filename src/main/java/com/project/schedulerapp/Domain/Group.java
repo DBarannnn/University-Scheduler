@@ -1,5 +1,6 @@
 package com.project.schedulerapp.Domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -18,6 +19,7 @@ public class Group {
 
     @Column(nullable = false)
     private Integer semester;
+
 
     @ManyToMany(mappedBy = "groups")
     private List<Student> students;
