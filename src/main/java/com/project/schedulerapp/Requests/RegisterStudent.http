@@ -1,0 +1,18 @@
+POST /register
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "email": "1",
+  "password": "1",
+  "fullName": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "patronymic": "Smith"
+  },
+  "position": "STUDENT",
+  "birthday": "1995-10-15",
+  "creditNumber": "1234567890",
+  "hasScholarship": true,
+  "groups": []
+}
