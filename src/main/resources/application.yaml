@@ -11,3 +11,10 @@ spring:
     showSql: true
     hibernate:
       ddl-auto: create-drop
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 31427926172-tp0s1rpd3d00jdembeds0frq1lkmbvr9.apps.googleusercontent.com
+            client-secret: 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

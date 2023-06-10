@@ -21,10 +21,12 @@ public class SecurityFilterChainConfig {
        http
                .csrf().disable()
                .authorizeHttpRequests()
-               .anyRequest().permitAll()
+               .requestMatchers("/register").permitAll()
+               .anyRequest().authenticated()
                .and()
                .authenticationProvider(authenticationProvider)
-               .formLogin(Customizer.withDefaults());
+               .formLogin(Customizer.withDefaults())
+               .oauth2Login();
        return http.build();
    }
 }
