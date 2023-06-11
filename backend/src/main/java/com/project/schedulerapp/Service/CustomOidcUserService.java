@@ -9,9 +9,6 @@ import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.stereotype.Service;
 
-import java.text.DateFormat;
-import java.util.Date;
-
 @Service
 @RequiredArgsConstructor
 public class CustomOidcUserService extends OidcUserService {
