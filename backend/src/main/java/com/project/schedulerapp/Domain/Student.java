@@ -1,6 +1,5 @@
 package com.project.schedulerapp.Domain;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.project.schedulerapp.Values.FullName;
 import com.project.schedulerapp.Values.Position;
 import jakarta.persistence.*;
@@ -20,26 +19,28 @@ public class Student implements UserDetails {
     @GeneratedValue
     private Long id;
 
-    @Column(nullable = true)
-    private FullName fullName;
+    @Column
+    private String firstName;
 
-    @Column(nullable = true)
+    @Column
+    private String lastName;
+
+    @Column
     @Enumerated(EnumType.STRING)
     private Position position;
 
-    @Column(nullable = true)
+    @Column
     private Date birthday;
 
-
+    @Column
     private String creditNumber;
 
     @Column
     private Boolean hasScholarship;
 
-    @Column
+    @Column(nullable = false)
     private String email;
 
-    @Column
     private String password;
 
 
