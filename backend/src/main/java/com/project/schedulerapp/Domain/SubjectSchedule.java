@@ -12,27 +12,27 @@ import java.time.LocalTime;
 @Table(name = "subject_schedule")
 public class SubjectSchedule {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private LocalTime startTime;
 
-    @Column
+    @Column(nullable = false)
     private LocalTime endTime;
 
-    @Column
+    @Column(nullable = false)
     private Boolean isOdd;
 
     @Enumerated(value = EnumType.STRING)
     private Day day;
 
     @ManyToOne
-    @JoinColumn(name = "subject_id")
+    @JoinColumn(name = "subject_id", nullable = false)
     private Subject subject;
 
     @ManyToOne
-    @JoinColumn(name = "group_id")
+    @JoinColumn(name = "group_id", nullable = false)
     private Group group;
 
 }

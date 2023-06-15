@@ -10,14 +10,14 @@ import java.time.LocalDateTime;
 @Entity
 public class Event {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     @Enumerated(value = EnumType.STRING)
     private Type type;
 
-    @Column
+    @Column(nullable = false)
     private String description;
 
     @Column
@@ -31,7 +31,7 @@ public class Event {
     private Subject subject;
 
     @ManyToOne
-    @JoinColumn(name = "group_id")
+    @JoinColumn(name = "group_id", nullable = false)
     private Group group;
 
 }

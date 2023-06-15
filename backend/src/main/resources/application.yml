@@ -1,10 +1,11 @@
+
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
     password: postgres
   flyway:
-    enabled: false
+    enabled: true
     baseline-on-migrate: true
   sql:
     init-mode: always
@@ -12,7 +13,7 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     showSql: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: none
   security:
     oauth2:
       client:

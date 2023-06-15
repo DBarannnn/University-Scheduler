@@ -7,13 +7,13 @@ import java.util.List;
 @Entity
 public class Subject {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String name;
 
-    @Column
+    @Column(nullable = false)
     private String teacherName;
 
     @OneToMany(mappedBy = "subject")

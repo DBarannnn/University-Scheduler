@@ -18,7 +18,7 @@ public class SubjectGroup {
     @Column
     private Integer numberLabs;
 
-    @Column
+    @Column(nullable = false)
     private Integer credits;
 
     @Column

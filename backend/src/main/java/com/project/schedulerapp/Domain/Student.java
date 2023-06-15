@@ -16,7 +16,7 @@ import java.util.List;
 @Entity
 public class Student implements UserDetails {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
@@ -40,6 +40,7 @@ public class Student implements UserDetails {
     @Column(nullable = false)
     private String email;
 
+    @Column
     private String password;
 
 
