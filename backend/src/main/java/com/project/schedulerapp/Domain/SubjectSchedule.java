@@ -15,6 +15,18 @@ public class SubjectSchedule {
     @GeneratedValue
     private Long id;
 
+    @Column
+    private LocalTime startTime;
+
+    @Column
+    private LocalTime endTime;
+
+    @Column
+    private Boolean isOdd;
+
+    @Enumerated(value = EnumType.STRING)
+    private Day day;
+
     @ManyToOne
     @JoinColumn(name = "subject_id")
     private Subject subject;
@@ -23,12 +35,4 @@ public class SubjectSchedule {
     @JoinColumn(name = "group_id")
     private Group group;
 
-    private LocalTime startTime;
-
-    private LocalTime endTime;
-
-    @Enumerated(value = EnumType.STRING)
-    private Day day;
-
-    private Boolean isOdd;
 }

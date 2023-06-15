@@ -25,7 +25,6 @@ public class Student implements UserDetails {
     @Column
     private String lastName;
 
-    @Column
     @Enumerated(EnumType.STRING)
     private Position position;
 

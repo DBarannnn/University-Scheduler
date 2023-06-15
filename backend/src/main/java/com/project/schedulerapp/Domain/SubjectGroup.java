@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Data
 @Entity
 @Table(name = "subject_group")
-public class SubjectPlan {
+public class SubjectGroup {
     @EmbeddedId
     private GroupSubjectId groupSubjectId;
 
