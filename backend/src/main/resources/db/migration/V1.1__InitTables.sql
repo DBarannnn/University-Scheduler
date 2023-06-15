@@ -6,8 +6,7 @@ CREATE TABLE IF NOT EXISTS student (
     email VARCHAR(64) NOT NULL,
     first_name VARCHAR(30),
     last_name VARCHAR(30),
-    password VARCHAR(20),
-    position VARCHAR(32),
+    password VARCHAR(256),
     CONSTRAINT pk_student PRIMARY KEY (id)
 );
 
@@ -15,6 +14,7 @@ CREATE TABLE IF NOT EXISTS _group(
     id BIGSERIAL,
     name VARCHAR(128) NOT NULL,
     year INTEGER NOT NULL,
+    headman_id BIGSERIAL,
     CONSTRAINT pk_group PRIMARY KEY (id)
 );
 

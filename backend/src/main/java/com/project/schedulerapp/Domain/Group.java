@@ -23,6 +23,10 @@ public class Group {
     @ManyToMany(mappedBy = "groups")
     private List<Student> students;
 
+    @ManyToOne
+    @JoinColumn(name = "headman_id")
+    private Student headMan;
+
     @ManyToMany
     @JoinTable(
             name = "subject_group",

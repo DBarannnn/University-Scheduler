@@ -25,9 +25,6 @@ public class Student implements UserDetails {
     @Column
     private String lastName;
 
-    @Enumerated(EnumType.STRING)
-    private Position position;
-
     @Column
     private Date birthday;
 
@@ -51,6 +48,9 @@ public class Student implements UserDetails {
             inverseJoinColumns = @JoinColumn(name = "group_id")
     )
     private List<Group> groups;
+
+    @OneToMany(mappedBy = "headMan")
+    private List<Group> headman_groups;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

@@ -1,5 +1,5 @@
-ALTER TABLE student
-ADD CONSTRAINT chk_position CHECK ( position in ('STUDENT', 'HEADMAN'));
+ALTER TABLE _group
+ADD CONSTRAINT fk_student_group FOREIGN KEY(headman_id) REFERENCES student(id);
 
 ALTER TABLE group_student
 ADD CONSTRAINT fk_group_group_student FOREIGN KEY(group_id) REFERENCES _group(id),

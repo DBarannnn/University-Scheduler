@@ -10,7 +10,6 @@ Content-Type: application/json
     "lastName": "Doe",
     "patronymic": "Smith"
   },
-  "position": "STUDENT",
   "birthday": "1995-10-15",
   "creditNumber": "1234567890",
   "hasScholarship": true,
