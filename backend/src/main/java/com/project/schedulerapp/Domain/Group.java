@@ -3,6 +3,7 @@ package com.project.schedulerapp.Domain;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.time.Year;
 import java.util.List;
 
 @Data
@@ -17,8 +18,7 @@ public class Group {
     private String name;
 
     @Column(nullable = false)
-    private Integer semester;
-
+    private Year year;
 
     @ManyToMany(mappedBy = "groups")
     private List<Student> students;

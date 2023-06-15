@@ -13,6 +13,7 @@ public class Event {
     @GeneratedValue
     private Long id;
 
+    @Column
     @Enumerated(value = EnumType.STRING)
     private Type type;
 

@@ -10,8 +10,10 @@ public class Subject {
     @GeneratedValue
     private Long id;
 
+    @Column
     private String name;
 
+    @Column
     private String teacherName;
 
     @OneToMany(mappedBy = "subject")

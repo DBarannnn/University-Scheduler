@@ -5,6 +5,7 @@ spring:
     password: postgres
   flyway:
     enabled: false
+    baseline-on-migrate: true
   sql:
     init-mode: always
   jpa:
